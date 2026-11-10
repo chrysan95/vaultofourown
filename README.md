@@ -4,8 +4,15 @@
 
 **Category:** Web · **Stack:** Flask 3 + Gunicorn · PostgreSQL 16 · Redis 7 · Docker Compose
 
-- Article: coming soon
-- YouTube demo: coming soon
+<p align="center">
+  <a href="https://medium.com/@chelsealanna95/vault-of-our-own-48870f8831cf">
+    <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://youtu.be/cUwEFsiWkEQ">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+  </a>
+</p>
 
 ## Features (MVP)
 - Create a campaign (GM) or join with a 6-character code (player)
