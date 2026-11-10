@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}My Campaigns · Vault of Our Own{% endblock %}
+{% block body %}
+<header class="topbar">
+  <div class="left"></div>
+  <a class="logo-link center" href="/" aria-label="Vault of Our Own home"><img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="40" height="40"></a>
+  <div class="right"><button type="button" class="username" data-username></button></div>
+</header>
+
+<main class="container" id="main">
+  <h1 class="home-title">Vault of Our Own</h1>
+  <form class="join-bar" id="join-form">
+    <label for="join-code" class="sr-only">Campaign code</label>
+    <input id="join-code" maxlength="6" placeholder="Enter a campaign code" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
+    <button type="submit">Join</button>
+  </form>
+  <div class="form-error" id="join-error" role="alert"></div>
+
+  <h2 class="recent-head">Recent Campaigns</h2>
+  <section class="cards" id="cards" aria-label="Your campaigns">
+    <button class="card create" id="create-card" type="button">
+      <span><span class="plus" aria-hidden="true">+</span>Create your new campaign</span>
+    </button>
+  </section>
+</main>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/home.js') }}" defer></script>
+{% endblock %}

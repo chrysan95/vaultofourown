@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#060715">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Vault of Our Own — a shared campaign hub for tabletop RPG Game Masters and players.">
+  <title>{% block title %}Vault of Our Own{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/logo.png') }}">
+  <link rel="preload" href="{{ url_for('static', filename='fonts/lexend-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="{% block body_class %}brush{% endblock %}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% block body %}{% endblock %}
+  <script src="{{ url_for('static', filename='js/common.js') }}" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

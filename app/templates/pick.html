@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Pick your Character · Vault of Our Own{% endblock %}
+{% block body %}
+<header class="topbar">
+  <div class="left"></div>
+  <a class="logo-link center" href="/home" aria-label="Back to campaigns"><img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="40" height="40"></a>
+  <div class="right"><button type="button" class="username" data-username></button></div>
+</header>
+<main class="container" id="main">
+  <h1 class="pick-title">Pick your Character</h1>
+  <section class="pick-grid" id="pick-grid" data-campaign="{{ campaign_id }}" aria-label="Player characters"></section>
+  <p class="pick-hint" id="pick-hint"></p>
+  <div class="form-error" id="pick-error" role="alert"></div>
+</main>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/characters.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/pick.js') }}" defer></script>
+{% endblock %}
