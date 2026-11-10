@@ -1,0 +1,12 @@
+# Optional: publish PostgreSQL and Redis to THIS computer only (127.0.0.1),
+# so desktop tools (DBeaver, pgAdmin, TablePlus, RedisInsight desktop) can connect.
+# Normal runs keep both databases private on vault_net.
+#
+#   docker compose -f docker-compose.yml -f compose.debug.yml up -d
+services:
+  db:
+    ports:
+      - "127.0.0.1:${DB_DEBUG_PORT:-5432}:5432"
+  redis:
+    ports:
+      - "127.0.0.1:${REDIS_DEBUG_PORT:-6379}:6379"
